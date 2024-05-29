@@ -1,0 +1,93 @@
+h1 {font-size:38px; font-weight:700; color:var(--c2);}
+h2 {font-size:34px; font-weight:700; color:var(--c2);}
+h3 {font-size:30px; font-weight:700; color:var(--c2);}
+h4 {font-size:26px; font-weight:700; color:var(--c2);}
+h5 {font-size:22px; font-weight:700; color:var(--c2);}
+h6 {font-size:18px; font-weight:700; color:var(--c2);}
+
+strong {font-weight:700;color:var(--c4);}
+b {font-weight:700;color:var(--c4);}
+mark {font-weight:700;color:var(--c4);}
+time {font-weight:700;color:var(--c4);}
+span {font-size:18px;}
+p {font-size:18px;}
+address {}
+
+ul {padding-left:30px;}
+ul::marker {color:var(--c5);}
+ol {padding-left:30px;}
+ol::marker {color:var(--c5);}
+li {}
+
+form {display:flex;justify-content:space-between; gap:8px;}
+section {flex:1 1 auto; border-bottom:1px solid var(--c4);}
+article {display:flex;justify-content:space-between; gap:8px;flex:1 1 320px;}
+
+.w1112M {max-width:1112px;width:100%;}
+
+body {
+    min-height: 100vh;
+    position:relative;
+}
+header {
+    position:sticky;
+}
+
+nav {}
+
+datalist {}
+option {}
+summary {}
+select {}
+
+img {}
+video {}
+iframe {}
+
+.input {background:var(--c5);padding:4px;border-radius:8px;}
+.input::placeholder {color:var(--c3);}
+.input {color:var(--c1);}
+
+.label {border:1px solid var(--c5);padding:4px;border-radius:8px;}
+.label input {background:var(--c5);width:100%;}
+a {color:var(--c7);}
+a:hover {color:var(--c8);}
+a:active {color:var(--c9);}
+
+
+
+.btn_light {background:var(--c6);color:var(--c7);border:1px solid var(--c7);}
+.btn_light:hover {border:1px solid var(--c8);color:var(--c8);}
+.btn_light:active {border:1px solid var(--c9);color:var(--c9);}
+
+.btn_dark {background:var(--c1);color:var(--c7);border:1px solid var(--c7);}
+.btn_dark:hover {background:var(--c2);border:1px solid var(--c8);color:var(--c5);}
+.btn_dark:active {background:var(--c3); border:1px solid var(--c9);color:var(--c9);}
+
+
+div {}
+
+.w1112M {max-width:1024px;width:100%;margin:0 auto;}
+.logo {width:40px;height:40px;display:flex;}
+
+.back_page {
+    height:60px;
+    width:60px;
+    background:rgba(255,255,255,0.5);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    color:var(--c2);
+    font-size:32px;
+    border:1px solid var(--c1);
+    position:fixed;
+    right:0vw;
+    bottom:0vh;
+    z-index:1;
+    margin:50px;
+}
+
+/*
+* {
+    border:1px solid green;
+}

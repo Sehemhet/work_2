@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="w f fc g64 p8">
+    
+
+<!-- тег time  -->
+<!-- Для СЕО -->
+<!-- время в 24-часовом формате или точной дата -->
+<p>Концерт состоялся <time datetime="2001-05-15 19:00">15 мая</time>.</p>
+
+<!-- тег mark -->
+<!-- представляет текст, выделенный в справочных целях из-за своей актуальности в определённом контексте -->
+<p><mark>Концерт</mark> состоялся <time datetime="2001-05-15 19:00">15 мая</time>.</p>
+
+<!-- adress тег -->
+<!-- Для СЕО -->
+<!-- выделяет блок с контактными данными -->
+<address class="c3">
+    tag adress
+    <a href="mailto:">mail</a>
+    <a href="tel:">link</a>
+</address>
+
+<!-- тег details/option -->
+<!-- создает выпадающие меню без js имеет атрибут open -->
+<details class="_b">
+    <summary class="b5 p8">
+        1 пункт...
+    </summary>
+    <p class="p8">
+        используется тег "details" в него вкладывается загаловок "summary" и параграф "p"
+    </p>
+</details>
+
+<!-- тег Select -->
+<!-- выпадаюее меню -->
+<!-- атрибуты -->
+<!-- autofocus, disabled, form, multiple, name, required, size  -->
+<select name="points" class="br8 h_40 _b p4 w_256 f fac _f_">
+    <option selected>value 1</option>
+    <option selected>value 2</option>
+    <option selected>value 3</option>
+</select>
+
+<!-- гиперссылка <a> -->
+<!-- не забываем использовать aira-label="" -->
+<p><a href="#" aria-label="информация о концерте">Концерт</a> состоялся <time datetime="2001-05-15 19:00">15 мая</time>.</p>
+
+
+<!-- тег datalist/option -->
+<!-- используется вместе с input -->
+<!-- выпадающий список вместе с поисковой строкой, исключает js -->
+<!-- атрибуты value="php" -->
+<div>
+    <input name="section" type="text" list="list_datalist" class="br8 h_40 _b p4" placeholder="выберите значение">
+    <datalist id="list_datalist" cols="2">
+        <option value="php"></option>
+        <option value="javascrypt"></option>
+        <option value="html/css"></option>
+        <option value="wordpress"></option>
+    </datalist>
+</div>
+
+
+<!-- тег dialog -->
+<!-- работает с формами, представляет из себя модальное окно -->
+<!-- исключающее некоторые функции js -->
+<!-- атрибуты open -->
+<div>
+    <button class="open_modal_1 f fc fac h_40 p8 _b br8" type="button">open</button>
+    <dialog class="modal_1">
+        <div class="modal_1_in f fc fac _f_ g16 p8">
+            <h2>
+                я модальное окно
+            </h2>
+            <p>
+                я текст модального окна этой веб-страницы
+            </p>
+            <button class="close_modal_1 f fc fac h_40 p8 _b br8" type="button">close</button>
+        </div>
+    </dialog>  
+    <style>
+        dialog::backdrop {
+            background-color: rgba(0,0,0,0.5);;
+        }
+        /* для добавления анимации нужно сменить работу модального окна с display (оно не анимируется) на visibility */
+        .modal_1 {
+            display: flex;
+            position: fixed;
+            border-radius:8px;
+            top:50%;
+            left:50%;
+            visibility: hidden;
+            transform:translate(-50%,-50%) scale(.2);
+            opacity:0;
+            transition: all .5s linear;
+        }
+        .modal_1[open] {
+            visibility: visible;
+            transform:translate(-50%,-50%) scale(1);
+            opacity:1;
+        }
+    </style>
+    
+    <script>
+        const open_modal_1 = document.querySelector('.open_modal_1');
+        const close_modal_1 = document.querySelector('.close_modal_1');
+        const modal_1 = document.querySelector('.modal_1');
+        //открыть с кнопки
+        open_modal_1.addEventListener('click', () => {
+            modal_1.showModal();
+        })
+        // закрыть с кнопки
+        close_modal_1.addEventListener('click', () => {
+            modal_1.close();
+        })
+        // закрыть с области вне модального окна
+        modal_1.addEventListener('click', (e) => {
+            if(e.target === modal_1) modal_1.close();
+        })
+
+
+    </script>
+
+
+</div>
+
+</body>
+</html>
