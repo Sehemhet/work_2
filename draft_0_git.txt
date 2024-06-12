@@ -1,0 +1,27 @@
+проверка ключа
+ls -al ~/.ssh
+
+создание ключа
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+добавление ключа
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+скопировать ключ
+cat ~/.ssh/id_rsa.pub
+
+подключение к гитхабу
+ssh -T git@github.com
+
+клонирование
+git clone git@github.com:Sehemhet/slider_item.git
+
+пуш
+git init
+git add .
+git commit -m 'step 1'
+git push -u origin main
+
+
+

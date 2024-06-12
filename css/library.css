@@ -1,46 +1,71 @@
 :root {
-    --c1:#191919;   /* black */
-    --c2:#4C4C4C;   /* black light */
-    --c3:#7F7F7F;   /* gray dark */
-    --c4:#B2B2B2;   /* gray */
-    --c5:#E5E5E5;   /* gray light */
-    --c6:#FFFFFF;   /* white */
-    --c6:#FFFFFF;   /* white */
+    --c0:#07131A;           /* black  */
+    --c1:#202B31;           /* black  */
+    --c2:#394248;           /* black  */
 
-    --c7:#007aff;   /* link */
-    --c8:#2150a2;   /* link hover */
-    --c9:#1c2a4f;   /* link active */
+    --c3:#676F73;           /* black  */
+    --c4:#A4A9AB;           /* black  */
+    --c5:#D1D4D5;           /* black  */
+
+    --c6:#EBECED;           /* black  */
+    --c7:#D1D4D5;           /* black  */
+    --c8:#FFFFFF;           /* black  */
+
+
+    --c9:#57C6EC;           /* link */
+    --c10:#0093DB;          /* link hover/active */
+    --c11:#07131A;          /* link disabled */
+    --c12:rgba(0, 147, 219, .8);
 }
 
+.c0 {color:var(--c0);}
 .c1 {color:var(--c1);}
 .c2 {color:var(--c2);}
+
 .c3 {color:var(--c3);}
 .c4 {color:var(--c4);}
 .c5 {color:var(--c5);}
-.c6 {color:var(--c6);}
 
+.c6 {color:var(--c6);}
 .c7 {color:var(--c7);}
 .c8 {color:var(--c8);}
+
 .c9 {color:var(--c9);}
+.c10 {color:var(--c10);}
+.c11 {color:var(--c11);}
 
-.b1 {background:var(--c1);}
-.b2 {background:var(--c2);}
-.b3 {background:var(--c3);}
-.b4 {background:var(--c4);}
-.b5 {background:var(--c5);}
-.b6 {background:var(--c6);}
+.b0 {background-color:var(--c0);}
+.b1 {background-color:var(--c1);}
+.b2 {background-color:var(--c2);}
 
-.b7 {background:var(--c7);}
-.b8 {background:var(--c8);}
-.b9 {background:var(--c9);}
+.b3 {background-color:var(--c3);}
+.b4 {background-color:var(--c4);}
+.b5 {background-color:var(--c5);}
 
+.b6 {background-color:var(--c6);}
+.b7 {background-color:var(--c7);}
+.b8 {background-color:var(--c8);}
+
+.b9 {background-color:var(--c9);}
+.b10 {background-color:var(--c10);}
+.b11 {background-color:var(--c11);}
+
+.fs8 {font-size:8px;}
+.fs12 {font-size:12px;}
 .fs14 {font-size:14px;}
+.fs16 {font-size:16px;}
 .fs18 {font-size:18px;}
+.fs20 {font-size:20px;}
 .fs22 {font-size:22px;}
+.fs24 {font-size:24px;}
 .fs26 {font-size:26px;}
+.fs28 {font-size:28px;}
+.fs30 {font-size:30px;}
 .fs32 {font-size:32px;}
+.fs34 {font-size:34px;}
 .fs36 {font-size:36px;}
 .fs40 {font-size:40px;}
+.fs96 {font-size:96px;}
 
 .f {display:-webkit-box;display:-ms-flexbox;display:flex;}
 .fw {-ms-flex-wrap:wrap;flex-wrap:wrap;}
@@ -68,14 +93,19 @@
 .Tt {text-transform: capitalize;}
 .t_nw {white-space: nowrap;}
 .t_t {text-align: justify;}
+.t_ls {letter-spacing: -1.92px;}
+
+.lh96 {line-height: 96px;}
 
 .fw7 {font-weight:700;}
 .fw4 {font-weight:400;}
 
 .g4 {gap:4px;}
 .g8 {gap:8px;}
+.g12 {gap:12px;}
 .g16 {gap:16px;}
 .g32 {gap:32px;}
+.g40 {gap:40px;}
 .g64 {gap:64px;}
 
 ._b {border: 1px solid var(--c1);}
@@ -90,13 +120,27 @@
 .p4b {padding-bottom:4px;}
 .p4 {padding:4px;}
 
+.p16 {padding:16px;}
+.p16l {padding-left:16px;}
+.p16r {padding-right:16px;}
+
+.p40t {padding-top:40px;}
+.p40b {padding-bottom:40px;}
+.p40 {padding:40px;}
+
+.p24 {padding:24px;}
+
 .p8l {padding-left:8px;}
 .p8r {padding-right:8px;}
 .p8t {padding-top:8px;}
 .p8b {padding-bottom:8px;}
 .p8 {padding:8px;}
 
+.p152t {padding-top:152px;}
+.p152b {padding-bottom:152px;}
+
 ._m_ {margin:0 auto;}
+.m40 {margin:40px;}
 
 .m8l {margin-left:8px;}
 .m8r {margin-right:8px;}
@@ -106,22 +150,30 @@
 
 .br8 {border-radius:8px;}
 .br0 {border-radius:50%;}
+.br16 {border-radius:16px;}
+.br24 {border-radius:24px;}
 
 
 .f_auto {-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;}
 .f100 {flex:1 1 100%}
-.f50 {flex:1 1 50%}
+.f50 {flex:1 0 50%}
 
 .w {width:100%;}
 .w_16 {width:16px;}
 .w_40 {width:40px;}
 .w_64 {width:64px;}
+.w_128 {width:128px;}
+.w_160 {width:160px;}
 .w_256 {width:256px;}
 
 .h {height: 100%;}
+.h_32 {height: 32px;}
+.h_48 {height: 48px;}
 .h_64 {height: 64px;}
 .h_40 {height: 40px;}
 .h_64m {min-height: 64px;}
+.h_152 {height: 152px;}
+.h_1024 {height: 1024px;}
 
 .z9 {z-index:9;}
 .z8 {z-index:8;}
@@ -138,6 +190,7 @@
 .__l {left:0px;}
 .__r {right: 0px;}
 
-
+.abs {position:absolute;}
+.rel {position:relative;}
 
 .lock {overflow: hidden;}
