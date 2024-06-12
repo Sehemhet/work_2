@@ -1,0 +1,16 @@
+# Игнорировать файлы .DS_Store
+.DS_Store
+
+# Игнорировать файлы логотипа webp
+images/logo.webp
+
+# Игнорировать временные и автогенерируемые файлы
+draft_0_git
+draft_1_tags
+draft_2_wp_start.html
+draft_3_wp_php.html
+draft_0_multiples.txt
+draft_4_slider.js
+draft_5_wp_end.html
+draft_6_deploy.txt
+draft_99_htaccess.txt
