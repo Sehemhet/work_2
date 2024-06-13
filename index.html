@@ -45,9 +45,9 @@
     </header>
 
 <main class="w h f _f_ fc fac g64">
-    <section class="w f _f_  back1 p152t p152b">
-        <div class="f wide f_f g16 ">
-            <div class="f50 f fc _f_">
+    <section class="w f fc  back1 p152t p152b g32">
+        <div class="screen_1 f wide g96 fac f_f">
+            <div id="leftBlock" class="f50 f fc _f_">
                 <div class="f fc g40 f_f">
                     <p class="fs16 fw7 T c3 T">
                         інноваційний онлайн-ресурс для медичних спеціалістів
@@ -70,32 +70,54 @@
                     </div>
                 </div>
             </div>
-            <div class="f50">
+            <div id="rightBlock" class="f50">
                 <div class="slide">
-                    <div class="rel w h f fc _f_ p40">
-                        <img class="abs __t __l m40 w_128" src="images/logo_w.png" alt="logo">
-                        <div class="f fc g40 f_f">
-                            <p class="fs20 fw7 T c8">
-                                Міждисциплинарна фахова школа
-                            </p>
-                            <h2 class="fs40 fw7 c8 t_ls">
-                                сучасній лікар - <br>
-                                шлях до досконалості
-                            </h2>
-                            <time class="f fc g4">
-                                <span class="c8 fs20 fw4">
-                                    28 Травня 2024
-                                </span>
-                                <span class="c8 fs20 fw4">
-                                    о 15:00
-                                </span>
-                            </time>
-                        </div>
-                    </div>
+                    <img class="w h slide" src="images/baner.png" alt="baner">
                 </div>
             </div>
-
         </div>
+        <div class="f wide fac">
+            <div class="f fac g16">
+                <button class="btn4 w_24 f fac _f_" aria-label="click prev" onclick="clickPag(1)">
+                    &#8592;
+                </button>
+                <button class="btn4 w_24 f fac _f_" aria-label="click next" onclick="clickPag(-1)">
+                    &#8594;	
+                </button>
+            </div>
+        </div>
+        <script>
+        function clickPag(direction) {
+            var leftBlock = document.getElementById('leftBlock');
+            var screen1 = document.querySelector('.screen_1');
+            var g96 = document.querySelector('.screen_1.g96');
+
+            if (direction === -1) {
+                // Сначала скрываем блок
+                setTimeout(function() {
+                    leftBlock.classList.add('hide');
+                }, 100);
+                setTimeout(function() {
+                    leftBlock.classList.add('wh0');
+                }, 200);
+                setTimeout(function() {
+                    screen1.classList.remove('g96');
+                }, 300);
+            } else if (direction === 1) {
+                setTimeout(function() {
+                    screen1.classList.add('g96');
+                }, 300);
+
+                setTimeout(function() {
+                    leftBlock.classList.remove('wh0');
+                }, 200);
+
+                setTimeout(function() {
+                    leftBlock.classList.remove('hide');
+                }, 300);
+            }
+        }
+        </script>
     </section>
 </main>
 

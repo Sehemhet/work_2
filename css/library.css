@@ -107,6 +107,7 @@
 .g32 {gap:32px;}
 .g40 {gap:40px;}
 .g64 {gap:64px;}
+.g96 {gap:96px;}
 
 ._b {border: 1px solid var(--c1);}
 ._bt {border-top: 1px solid var(--c1);}
@@ -152,19 +153,27 @@
 .br0 {border-radius:50%;}
 .br16 {border-radius:16px;}
 .br24 {border-radius:24px;}
+.br32 {border-radius:32px;}
 
 
 .f_auto {-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;}
 .f100 {flex:1 1 100%}
-.f50 {flex:1 0 50%}
+.f50 {flex:0 0 50%}
 
 .w {width:100%;}
 .w_16 {width:16px;}
+.w_24 {width:24px;}
 .w_40 {width:40px;}
 .w_64 {width:64px;}
 .w_128 {width:128px;}
 .w_160 {width:160px;}
 .w_256 {width:256px;}
+.wh0 {
+    width: 0px !important; 
+    height: 0px !important; 
+    flex:0 0 0px !important;
+    transition: all .2 ease;
+}
 
 .h {height: 100%;}
 .h_32 {height: 32px;}
@@ -193,4 +202,22 @@
 .abs {position:absolute;}
 .rel {position:relative;}
 
+.none {display:none !important;}
+
 .lock {overflow: hidden;}
+
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, flex 0.5s ease-in-out;
+}
+.expand {
+    flex: 1 1 100%;
+    transition: flex 0.5s ease-in-out;
+}
